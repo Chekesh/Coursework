@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="Plane" alignment="CENTER" prefHeight="550.0" prefWidth="400.0" style="-fx-background-color: #515151;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.RegistrationController">
+
+    <children>
+        <Label fx:id="label" alignment="CENTER" text="Регистрация" textFill="#0c9ff5" textOverrun="CENTER_ELLIPSIS" VBox.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold Italic" size="16.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="100.0" top="10.0" />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="375.0">
+            <children>
+              <TextField fx:id="Surname" maxHeight="26.0" maxWidth="200.0" promptText="Фамилия" style="-fx-background-color: #6b6b6b;">
+                  <effect>
+                      <DropShadow>
+                          <color>
+                              <Color red="0.0470588244497776" green="0.6235294342041016" blue="0.9607843160629272" />
+                          </color>
+                      </DropShadow>
+                  </effect>
+              </TextField>
+                <TextField fx:id="Name" promptText="Имя" style="-fx-background-color: #6b6b6b;">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.0470588244497776" green="0.6235294342041016" blue="0.9607843160629272" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+                </TextField>
+            </children>
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+        </HBox>
+          <TextField fx:id="Patronymic" promptText="Отчество" style="-fx-background-color: #6b6b6b;">
+              <effect>
+                  <DropShadow>
+                      <color>
+                          <Color red="0.0470588244497776" green="0.6235294342041016" blue="0.9607843160629272" />
+                      </color>
+                  </DropShadow>
+              </effect>
+         <VBox.margin>
+            <Insets left="100.0" right="100.0" top="15.0" />
+         </VBox.margin>
+          </TextField>
+        <DatePicker fx:id="Birth_Date" prefHeight="26.0" prefWidth="274.0" promptText="Дата рождения: дд.мм.гггг" style="-fx-background-color: #6b6b6b;">
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.0470588244497776" green="0.6235294342041016" blue="0.9607843160629272" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </DatePicker>
+        <Label alignment="CENTER" text="Пол" textFill="#0c9ff5" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font name="System Bold Italic" size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="100.0" top="10.0" />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="375.0">
+            <children>
+            <RadioButton fx:id="Gender_Man" mnemonicParsing="false" style="-fx-text-fill: #0c9ff5;" text="Мужской">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Gender" />
+               </toggleGroup>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="Gender_Woman" mnemonicParsing="false" style="-fx-text-fill: #0c9ff5;" text="Женский" toggleGroup="$Gender" />
+            </children>
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+        </HBox>
+      <TextField fx:id="Phone_Number" promptText="Номер телефона" style="-fx-background-color: #6b6b6b;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.0470588244497776" green="0.6235294342041016" blue="0.9607843160629272" />
+               </color>
+            </DropShadow>
+         </effect>
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" top="20.0" />
+         </VBox.margin>
+      </TextField>
+        <TextField fx:id="Login" promptText="Логин" style="-fx-background-color: #6b6b6b;">
+            <VBox.margin>
+                <Insets left="50.0" right="50.0" top="20.0" />
+            </VBox.margin>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.0470588244497776" green="0.6235294342041016" blue="0.9607843160629272" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </TextField>
+      <TextField fx:id="Password_First" promptText="Пароль" style="-fx-background-color: #6b6b6b;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.0470588244497776" green="0.6235294342041016" blue="0.9607843160629272" />
+               </color>
+            </DropShadow>
+         </effect>
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" top="20.0" />
+         </VBox.margin>
+      </TextField>
+        <TextField fx:id="Password_Second" promptText="Пароль" style="-fx-background-color: #6b6b6b;">
+            <VBox.margin>
+                <Insets left="50.0" right="50.0" top="20.0" />
+            </VBox.margin>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.0470588244497776" green="0.6235294342041016" blue="0.9607843160629272" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </TextField>
+        <Button fx:id="BtnAuthorization" mnemonicParsing="false" onMouseClicked="#ClickAuthorization" style="-fx-background-color: #6b6b6b; -fx-text-fill: #0c9ff5;" text="Зарегистрироваться" textAlignment="CENTER" textFill="#1fa1ed">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <Label fx:id="Back" alignment="CENTER" onMouseClicked="#ClickBack" text="Назад" textFill="#0c9ff5" textOverrun="CENTER_ELLIPSIS">
+         <opaqueInsets>
+            <Insets bottom="100.0" top="10.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+    </children>
+</VBox>

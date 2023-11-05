@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="500.0" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.Client">
+    <children>
+      <AnchorPane prefHeight="600.0" prefWidth="125.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Circle fx:id="Gender" layoutX="67.0" layoutY="82.0" radius="62.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="459.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="17.0">
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" focusAngle="-144.46" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.12941177189350128" green="0.5921568870544434" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Circle>
+            <Label fx:id="Login" alignment="CENTER" layoutX="49.0" layoutY="170.0" text="Login" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="170.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Surname" alignment="CENTER" layoutX="36.0" layoutY="210.0" text="Surname" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="210.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Name" alignment="CENTER" layoutX="47.0" layoutY="261.0" text="Name" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Patronymic" alignment="CENTER" layoutX="31.0" layoutY="309.0" text="Patronymic" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="290.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="Exit" layoutX="40.0" layoutY="428.0" mnemonicParsing="false" onMouseClicked="#BtnExit" text="Выйти" AnchorPane.bottomAnchor="26.4" />
+         </children>
+      </AnchorPane>
+        <TabPane layoutX="158.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="464.0" prefWidth="587.0" rotateGraphic="true" style="-fx-border-color: #000000;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="132.79999999999995" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="        Портфолио        ">
+                    <content>
+                        <AnchorPane prefHeight="435.0" prefWidth="602.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="198.0" layoutY="14.0" prefHeight="27.0" prefWidth="392.0" text="Портфолио" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="199.0">
+                                    <font>
+                                        <Font name="System Bold Italic" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="TOP_CENTER" layoutX="3.0" layoutY="41.0" prefHeight="126.0" prefWidth="612.0" text="Наша рекламно-производственная фирма предлагает полный спектр услуг по полиграфии и печати, от создания оригинальных дизайнерских проектов до качественного исполнения заказов в короткие сроки.  Мы работаем со всеми типами материалов, включая бумагу, картон, пластик, металл и ткань, чтобы обеспечить максимальную уникальностьвашего продукта, или бренда. Кроме того, мы гарантируем высокое качество изготовления всех наших работ, что позволяет нашим клиентам быть уверены в том, что их продукция будетотлично представлена перед своими целевыми группами. &#10;" wrapText="true" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="41.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="     Услуги     ">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="154.0" layoutY="21.0" prefHeight="27.0" prefWidth="318.0" text="Услуги" AnchorPane.leftAnchor="154.0" AnchorPane.rightAnchor="154.0">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutX="121.0" layoutY="69.0" prefHeight="44.0" prefWidth="375.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="126.0" text="Выберете услугу:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="Services_Box" maxWidth="170.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="-4.0" layoutY="123.0" prefHeight="26.0" prefWidth="618.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" text="Минимальная стоимость:">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Services_Cost">
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="-5.0" layoutY="158.0" prefHeight="26.0" prefWidth="618.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" text="Минимальное время выполнения:">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Services_Time">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" layoutY="192.0" prefHeight="20.0" prefWidth="414.0" text="Добавьте комментарий к услуге:" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TextArea fx:id="Services_Comments" layoutX="114.0" layoutY="223.0" prefHeight="203.0" prefWidth="390.0" wrapText="true" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="225.0" />
+                        <Label alignment="CENTER" layoutX="161.0" layoutY="405.0" prefHeight="67.0" prefWidth="307.0" text="После оформления заказа, ваш заказ встанет в очередь, где его просмотрит наш работник, а после свяжется с вами для уточнения деталей заказа" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+                        <HBox alignment="CENTER" layoutX="237.0" layoutY="501.0" prefHeight="46.0" prefWidth="156.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0">
+                           <children>
+                              <Button fx:id="Services_Button" mnemonicParsing="false" onMouseClicked="#Click_Services" prefHeight="26.0" prefWidth="90.0" text="Заказать" />
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="     Продукция     ">
+                <content>
+                    <AnchorPane prefHeight="532.0" prefWidth="626.0">
+                        <children>
+                        <Label alignment="CENTER" layoutX="149.0" layoutY="21.0" prefHeight="27.0" prefWidth="318.0" text="Продукция" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="159.0">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutX="133.0" layoutY="70.0" prefHeight="44.0" prefWidth="617.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="152.0" text="Выберете продукцию:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="Products_Box" maxWidth="170.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="8.0" layoutY="124.0" prefHeight="26.0" prefWidth="618.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" text="Приблизительная стоимость:">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Products_Cost">
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="7.0" layoutY="159.0" prefHeight="26.0" prefWidth="618.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" text="Приблизительное время выполнения:">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Products_Time">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" layoutX="12.0" layoutY="193.0" prefHeight="20.0" prefWidth="414.0" text="Добавьте комментарий к услуге:" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="Products_Comments" layoutX="114.0" layoutY="222.0" prefHeight="203.0" prefWidth="390.0" wrapText="true" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="225.0" />
+                        <Label alignment="CENTER" layoutX="150.0" layoutY="434.0" prefHeight="67.0" prefWidth="307.0" text="После оформления заказа, ваш заказ встанет в очередь, где его просмотрит наш работник, а после свяжется с вами для уточнения деталей заказа" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+                        <HBox alignment="CENTER" layoutX="231.0" layoutY="501.0" prefHeight="46.0" prefWidth="156.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0">
+                           <children>
+                              <Button fx:id="Products_Button" mnemonicParsing="false" onMouseClicked="#Click_Products" prefHeight="26.0" prefWidth="90.0" text="Заказать" />
+                           </children>
+                        </HBox>
+                        </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="History" onSelectionChanged="#History_Changed" text="     История     ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.4759740259740259" prefHeight="453.0" prefWidth="587.0" AnchorPane.bottomAnchor="-2.400000000000034" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="98.0" layoutY="54.0" text="История услуг" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="96.0" layoutY="102.0" text="Выберете заказ" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="102.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" layoutY="138.0" prefHeight="44.0" prefWidth="274.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="138.0">
+                                       <children>
+                                          <ChoiceBox fx:id="History_Services" maxWidth="170.0" minWidth="170.0">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin></ChoiceBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="-2.0" layoutY="198.0" prefHeight="44.0" prefWidth="274.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="198.0">
+                                       <children>
+                                          <Label text="Стоимость:" />
+                                          <Label fx:id="History_Services_Cost">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="6.0" layoutY="242.0" prefHeight="44.0" prefWidth="274.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="242.0">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="77.0" text="Дата заказа:" />
+                                          <Label fx:id="History_Services_Date" />
+                                       </children>
+                                    </HBox>
+                                    <Label alignment="CENTER" layoutY="287.0" prefHeight="18.0" prefWidth="294.0" text="Прогресс выполнения:" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="287.0" />
+                                    <ProgressIndicator fx:id="History_Services_Process" layoutX="44.0" layoutY="324.0" minHeight="183.0" minWidth="195.0" prefHeight="183.0" prefWidth="244.0" progress="0.0" AnchorPane.bottomAnchor="66.40000000000003" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="31.19999999999999" AnchorPane.topAnchor="324.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="98.0" layoutY="54.0" text="История Продукции" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="96.0" layoutY="102.0" text="Выберете заказ" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="102.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" layoutY="138.0" prefHeight="44.0" prefWidth="274.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="138.0">
+                                       <children>
+                                          <ChoiceBox fx:id="History_Product" maxWidth="170.0" minWidth="170.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="-2.0" layoutY="198.0" prefHeight="44.0" prefWidth="274.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="198.0">
+                                       <children>
+                                          <Label text="Стоимость:" />
+                                          <Label fx:id="History_Product_Cost">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="6.0" layoutY="242.0" prefHeight="44.0" prefWidth="274.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="242.0">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="77.0" text="Дата заказа:" />
+                                          <Label fx:id="History_Product_Date" />
+                                       </children>
+                                    </HBox>
+                                    <Label alignment="CENTER" layoutY="287.0" prefHeight="18.0" prefWidth="294.0" text="Прогресс выполнения:" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="287.0" />
+                                    <ProgressIndicator fx:id="History_Product_Process" layoutX="44.0" layoutY="324.0" minHeight="183.0" minWidth="195.0" prefHeight="183.0" prefWidth="244.0" progress="0.0" AnchorPane.bottomAnchor="66.40000000000003" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="31.19999999999999" AnchorPane.topAnchor="324.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            </tabs>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+        </TabPane>
+    </children>
+</AnchorPane>
