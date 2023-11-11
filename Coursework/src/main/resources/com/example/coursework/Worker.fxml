@@ -55,7 +55,7 @@
                   <Insets left="60.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="Exit" mnemonicParsing="false" text="Выйти">
+            <Button mnemonicParsing="false" onMouseClicked="#BtnExit" text="Выйти">
                <HBox.margin>
                   <Insets left="60.0" />
                </HBox.margin>
@@ -70,88 +70,101 @@
                      <children>
                         <Accordion layoutY="-2.0" prefHeight="417.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <panes>
-                            <TitledPane animated="false" text="В обработке">
+                            <TitledPane animated="false" onMouseClicked="#BtnSerHan" text="В обработке">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView layoutX="-1.0" layoutY="-3.0" prefHeight="251.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <TableView fx:id="SerHan" layoutX="-1.0" layoutY="-3.0" prefHeight="251.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <columns>
-                                                <TableColumn prefWidth="75.0" text="ID_Заказа" />
-                                                <TableColumn prefWidth="115.20006620883942" text="ID_Пользователя" />
-                                                <TableColumn minWidth="0.0" prefWidth="79.19999694824219" text="ID_Услуги" />
-                                                <TableColumn minWidth="0.0" prefWidth="112.00001525878906" text="Дата заказа" />
-                                                <TableColumn prefWidth="82.4000244140625" text="Статус" />
-                                                <TableColumn prefWidth="88.800048828125" text="Прогресс" />
-                                                <TableColumn minWidth="8.79998779296875" prefWidth="96.00006103515625" text="Стоимость" />
-                                                <TableColumn prefWidth="145.5999755859375" text="Коментарий заказчика" />
+                                                <TableColumn fx:id="SerHan_ID" prefWidth="75.0" text="ID_Заказа" />
+                                                <TableColumn fx:id="SerHan_ID_User" prefWidth="115.20006620883942" text="ID_Пользователя" />
+                                                <TableColumn fx:id="SerHan_ID_Services" minWidth="0.0" prefWidth="79.19999694824219" text="ID_Услуги" />
+                                                <TableColumn fx:id="SerHan_Status" prefWidth="82.4000244140625" text="Статус" />
+                                                <TableColumn fx:id="SerHan_Process" prefWidth="88.800048828125" text="Прогресс" />
+                                                <TableColumn fx:id="SerHan_Cost" minWidth="8.79998779296875" prefWidth="96.00006103515625" text="Стоимость" />
+                                                <TableColumn fx:id="SerHan_Date" minWidth="0.0" prefWidth="112.00001525878906" text="Дата заказа" />
+                                                <TableColumn fx:id="SerHan_Coments" prefWidth="145.5999755859375" text="Коментарий заказчика" />
                                              </columns>
                                           </TableView>
-                                          <TextField layoutX="373.0" layoutY="270.0" promptText="ID_Пользователя" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="360.0" AnchorPane.rightAnchor="360.0" />
-                                          <Button layoutX="423.0" layoutY="310.0" mnemonicParsing="false" text="Найти" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" />
+                                          <TextField fx:id="SerHan_ID_User_Text" layoutX="373.0" layoutY="270.0" promptText="ID_Пользователя" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="360.0" AnchorPane.rightAnchor="360.0" />
+                                          <Button layoutX="423.0" layoutY="310.0" mnemonicParsing="false" onMouseClicked="#SerHan_Find" text="Найти" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" />
                                           <HBox alignment="CENTER" layoutX="48.6" layoutY="347.0" prefHeight="34.0" prefWidth="821.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                              <children>
-                                                <Label text="Имя">
+                                                <Label fx:id="SerHan_Name_User" text="Имя">
                                                    <HBox.margin>
                                                       <Insets right="50.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <Label text="Фамилия">
+                                                <Label fx:id="SerHan_Surname_User" text="Фамилия">
                                                    <HBox.margin>
                                                       <Insets right="25.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <Label text="Отчество">
+                                                <Label fx:id="SerHan_Patronymic_User" text="Отчество">
                                                    <HBox.margin>
                                                       <Insets left="25.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <Label text="Номер телефона">
+                                                <Label fx:id="SerHan_Phone_Number_User" text="Номер телефона">
                                                    <HBox.margin>
                                                       <Insets left="50.0" />
                                                    </HBox.margin>
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER" layoutX="39.0" layoutY="421.0" prefHeight="50.0" prefWidth="879.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                          <HBox alignment="CENTER" layoutX="38.0" layoutY="453.0" prefHeight="50.0" prefWidth="879.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.80000000000018">
                                              <children>
-                                                <Button mnemonicParsing="false" text="Отказано">
+                                                <Button mnemonicParsing="false" onMouseClicked="#SerHan_Refused" text="Отказано">
                                                    <HBox.margin>
                                                       <Insets right="50.0" />
                                                    </HBox.margin>
                                                 </Button>
-                                                <Button mnemonicParsing="false" text="Принято">
+                                                <Button mnemonicParsing="false" onMouseClicked="#SerHan_Accepted" text="Принято">
                                                    <HBox.margin>
                                                       <Insets left="50.0" />
                                                    </HBox.margin>
                                                 </Button>
                                              </children>
                                           </HBox>
-                                          <TextField layoutX="375.0" layoutY="388.0" promptText="Стоимость" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="360.0" AnchorPane.rightAnchor="360.0" />
+                                          <HBox alignment="CENTER" layoutX="9.0" layoutY="398.0" prefHeight="47.0" prefWidth="766.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="10.200000000000045">
+                                             <children>
+                                                <TextField fx:id="SerHan_ID_Text" prefHeight="26.0" prefWidth="109.0" promptText="ID_Заказа">
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <TextField fx:id="SerHan_Cost_Text" prefHeight="26.0" prefWidth="102.0" promptText="Стоимость">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
                                        </children>
                                     </AnchorPane>
                               </content>
                             </TitledPane>
-                            <TitledPane animated="false" text="В процессе">
+                            <TitledPane animated="false" onMouseClicked="#BtnSerPro" text="В процессе">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView layoutX="19.6" layoutY="19.6" prefHeight="282.0" prefWidth="879.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <TableView fx:id="SerPro" layoutX="19.6" layoutY="19.6" prefHeight="282.0" prefWidth="879.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <columns>
-                                                <TableColumn prefWidth="75.0" text="ID_Заказа" />
-                                                <TableColumn prefWidth="115.20006620883942" text="ID_Пользователя" />
-                                                <TableColumn minWidth="0.0" prefWidth="79.19999694824219" text="ID_Услуги" />
-                                                <TableColumn minWidth="0.0" prefWidth="112.00001525878906" text="Дата заказа" />
-                                                <TableColumn prefWidth="82.4000244140625" text="Статус" />
-                                                <TableColumn prefWidth="88.800048828125" text="Прогресс" />
-                                                <TableColumn minWidth="8.79998779296875" prefWidth="96.00006103515625" text="Стоимость" />
-                                                <TableColumn prefWidth="145.5999755859375" text="Коментарий заказчика" />
+                                                <TableColumn fx:id="SerPro_ID" prefWidth="75.0" text="ID_Заказа" />
+                                                <TableColumn fx:id="SerPro_ID_User" prefWidth="115.20006620883942" text="ID_Пользователя" />
+                                                <TableColumn fx:id="SerPro_ID_Services" minWidth="0.0" prefWidth="79.19999694824219" text="ID_Услуги" />
+                                                <TableColumn fx:id="SerPro_Status" prefWidth="82.4000244140625" text="Статус" />
+                                                <TableColumn fx:id="SerPro_Process" prefWidth="88.800048828125" text="Прогресс" />
+                                                <TableColumn fx:id="SerPro_Cost" minWidth="8.79998779296875" prefWidth="96.00006103515625" text="Стоимость" />
+                                                <TableColumn fx:id="SerPro_Date" minWidth="0.0" prefWidth="112.00001525878906" text="Дата заказа" />
+                                                <TableColumn fx:id="SerPro_Coments" prefWidth="145.5999755859375" text="Коментарий заказчика" />
                                              </columns>
                                           </TableView>
-                                          <TextField layoutX="474.0" layoutY="349.0" promptText="Прогресс" AnchorPane.bottomAnchor="136.59999999999997" AnchorPane.leftAnchor="474.0" AnchorPane.rightAnchor="284.4000000000001" />
-                                          <Button layoutX="410.0" layoutY="395.0" mnemonicParsing="false" text="Обновить" AnchorPane.bottomAnchor="90.59999999999997" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" />
-                                          <Button layoutX="413.0" layoutY="455.0" mnemonicParsing="false" text="Завершен" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" />
-                                          <TextField layoutX="410.0" layoutY="310.0" promptText="ID_Заказа" AnchorPane.bottomAnchor="175.59999999999997" AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="409.20000000000005" />
-                                          <TextField layoutX="260.0" layoutY="346.0" promptText="Стоимость" AnchorPane.bottomAnchor="139.6" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="479.19999999999993" />
+                                          <TextField fx:id="SerPro_Process_Text" layoutX="474.0" layoutY="349.0" promptText="Прогресс" AnchorPane.bottomAnchor="136.59999999999997" AnchorPane.leftAnchor="474.0" AnchorPane.rightAnchor="284.4000000000001" />
+                                          <Button layoutX="410.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#SerPro_Update" text="Обновить" AnchorPane.bottomAnchor="90.59999999999997" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" />
+                                          <Button layoutX="413.0" layoutY="455.0" mnemonicParsing="false" onMouseClicked="#SerPro_Completed" text="Завершен" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" />
+                                          <TextField fx:id="SerPro_ID_Text" layoutX="404.0" layoutY="312.0" prefHeight="26.0" prefWidth="109.0" promptText="ID_Заказа" AnchorPane.bottomAnchor="172.8" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="405.20000000000005" />
+                                          <TextField fx:id="SerPro_Cost_Text" layoutX="260.0" layoutY="346.0" promptText="Стоимость" AnchorPane.bottomAnchor="139.6" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="479.19999999999993" />
                                        </children></AnchorPane>
                               </content>
                             </TitledPane>
@@ -167,42 +180,42 @@
                      <children>
                         <Accordion layoutX="10.0" layoutY="8.0" prefHeight="417.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <panes>
-                              <TitledPane animated="false" text="В обработке">
+                              <TitledPane animated="false" onMouseClicked="#BtnProHan" text="В обработке">
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView layoutX="-1.0" layoutY="-3.0" prefHeight="251.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <TableView fx:id="ProHan" layoutX="-1.0" layoutY="-3.0" prefHeight="251.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <columns>
-                                                <TableColumn prefWidth="75.0" text="ID_Заказа" />
-                                                <TableColumn prefWidth="115.20006620883942" text="ID_Пользователя" />
-                                                <TableColumn minWidth="0.0" prefWidth="79.19999694824219" text="ID_Продукции" />
-                                                <TableColumn minWidth="0.0" prefWidth="112.00001525878906" text="Дата заказа" />
-                                                <TableColumn prefWidth="82.4000244140625" text="Статус" />
-                                                <TableColumn prefWidth="88.800048828125" text="Прогресс" />
-                                                <TableColumn minWidth="8.79998779296875" prefWidth="96.00006103515625" text="Стоимость" />
-                                                <TableColumn prefWidth="145.5999755859375" text="Коментарий заказчика" />
+                                                <TableColumn fx:id="ProHan_ID" prefWidth="75.0" text="ID_Заказа" />
+                                                <TableColumn fx:id="ProHan_ID_User" prefWidth="115.20006620883942" text="ID_Пользователя" />
+                                                <TableColumn fx:id="ProHan_ID_Products" minWidth="0.0" prefWidth="79.19999694824219" text="ID_Продукции" />
+                                                <TableColumn fx:id="ProHan_Status" prefWidth="82.4000244140625" text="Статус" />
+                                                <TableColumn fx:id="ProHan_Process" prefWidth="88.800048828125" text="Прогресс" />
+                                                <TableColumn fx:id="ProHan_Cost" minWidth="8.79998779296875" prefWidth="96.00006103515625" text="Стоимость" />
+                                                <TableColumn fx:id="ProHan_Date" minWidth="0.0" prefWidth="112.00001525878906" text="Дата заказа" />
+                                                <TableColumn fx:id="ProHan_Coments" prefWidth="145.5999755859375" text="Коментарий заказчика" />
                                              </columns>
                                           </TableView>
-                                          <TextField layoutX="373.0" layoutY="270.0" promptText="ID_Пользователя" />
-                                          <Button layoutX="423.0" layoutY="310.0" mnemonicParsing="false" text="Найти" />
+                                          <TextField fx:id="ProHan_ID_User_Text" layoutX="373.0" layoutY="270.0" promptText="ID_Пользователя" />
+                                          <Button layoutX="423.0" layoutY="310.0" mnemonicParsing="false" onMouseClicked="#ProHan_Find" text="Найти" />
                                           <HBox alignment="CENTER" layoutX="48.6" layoutY="347.0" prefHeight="34.0" prefWidth="821.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="38.0">
                                              <children>
-                                                <Label text="Имя">
+                                                <Label fx:id="ProHan_Name_User" text="Имя">
                                                    <HBox.margin>
                                                       <Insets right="50.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <Label text="Фамилия">
+                                                <Label fx:id="ProHan_Surname_User" text="Фамилия">
                                                    <HBox.margin>
                                                       <Insets right="25.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <Label text="Отчество">
+                                                <Label fx:id="ProHan_Patronymic_User" text="Отчество">
                                                    <HBox.margin>
                                                       <Insets left="25.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <Label text="Номер телефона">
+                                                <Label fx:id="ProHan_Phone_Number_User" text="Номер телефона">
                                                    <HBox.margin>
                                                       <Insets left="50.0" />
                                                    </HBox.margin>
@@ -211,42 +224,57 @@
                                           </HBox>
                                           <HBox alignment="CENTER" layoutX="39.0" layoutY="421.0" prefHeight="50.0" prefWidth="879.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="38.600000000000136">
                                              <children>
-                                                <Button mnemonicParsing="false" text="Отказано">
+                                                <Button mnemonicParsing="false" onMouseClicked="#ProHan_Refused" text="Отказано">
                                                    <HBox.margin>
                                                       <Insets right="50.0" />
                                                    </HBox.margin>
                                                 </Button>
-                                                <Button mnemonicParsing="false" text="Принято">
+                                                <Button mnemonicParsing="false" onMouseClicked="#ProHan_Accepted" text="Принято">
                                                    <HBox.margin>
                                                       <Insets left="50.0" />
                                                    </HBox.margin>
                                                 </Button>
                                              </children>
                                           </HBox>
-                                          <TextField layoutX="375.0" layoutY="388.0" promptText="Стоимость" />
+                                          <HBox alignment="CENTER" layoutX="64.0" layoutY="381.0" prefHeight="47.0" prefWidth="766.0">
+                                             <children>
+                                                <TextField fx:id="ProHan_ID_Text" prefHeight="26.0" prefWidth="109.0" promptText="ID_Заказа">
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <TextField fx:id="ProHan_Cost_Text" prefHeight="26.0" prefWidth="102.0" promptText="Стоимость">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
                                        </children>
                                     </AnchorPane>
                                  </content>
                               </TitledPane>
-                              <TitledPane animated="false" text="В процессе">
+                              <TitledPane animated="false" onMouseClicked="#BtnProPro" text="В процессе">
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TableView layoutX="9.0" layoutY="7.0" prefHeight="251.0" prefWidth="900.0">
+                                          <TableView fx:id="ProPro" layoutX="9.0" layoutY="7.0" prefHeight="251.0" prefWidth="900.0">
                                              <columns>
-                                                <TableColumn prefWidth="75.0" text="ID_Заказа" />
-                                                <TableColumn prefWidth="115.20006620883942" text="ID_Пользователя" />
-                                                <TableColumn minWidth="0.0" prefWidth="79.19999694824219" text="ID_Продукции" />
-                                                <TableColumn minWidth="0.0" prefWidth="112.00001525878906" text="Дата заказа" />
-                                                <TableColumn prefWidth="82.4000244140625" text="Статус" />
-                                                <TableColumn prefWidth="88.800048828125" text="Прогресс" />
-                                                <TableColumn minWidth="8.79998779296875" prefWidth="96.00006103515625" text="Стоимость" />
-                                                <TableColumn prefWidth="145.5999755859375" text="Коментарий заказчика" />
+                                                <TableColumn fx:id="ProPro_ID" prefWidth="75.0" text="ID_Заказа" />
+                                                <TableColumn fx:id="ProPro_ID_User" prefWidth="115.20006620883942" text="ID_Пользователя" />
+                                                <TableColumn fx:id="ProPro_ID_Products" minWidth="0.0" prefWidth="79.19999694824219" text="ID_Продукции" />
+                                                <TableColumn fx:id="ProPro_Status" prefWidth="82.4000244140625" text="Статус" />
+                                                <TableColumn fx:id="ProPro_Process" prefWidth="88.800048828125" text="Прогресс" />
+                                                <TableColumn fx:id="ProPro_Cost" minWidth="8.79998779296875" prefWidth="96.00006103515625" text="Стоимость" />
+                                                <TableColumn fx:id="ProPro_Date" minWidth="0.0" prefWidth="112.00001525878906" text="Дата заказа" />
+                                                <TableColumn fx:id="ProPro_Coments" prefWidth="145.5999755859375" text="Коментарий заказчика" />
                                              </columns>
                                           </TableView>
-                                          <TextField layoutX="375.0" layoutY="286.0" promptText="Прогресс" />
-                                          <Button layoutX="414.0" layoutY="325.0" mnemonicParsing="false" text="Обновить" />
-                                          <Button layoutX="414.0" layoutY="434.0" mnemonicParsing="false" text="Завершен" />
+                                          <Button layoutX="409.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#ProPro_Completed" text="Завершен" />
+                                          <TextField fx:id="ProPro_Process_Text" layoutX="474.0" layoutY="328.0" promptText="Прогресс" />
+                                          <Button layoutX="410.0" layoutY="374.0" mnemonicParsing="false" onMouseClicked="#ProPro_Update" text="Обновить" />
+                                          <TextField fx:id="ProPro_ID_Text" layoutX="400.0" layoutY="292.0" prefHeight="26.0" prefWidth="90.0" promptText="ID_Заказа" />
+                                          <TextField fx:id="ProPro_Cost_Text" layoutX="260.0" layoutY="325.0" promptText="Стоимость" />
                                        </children>
                                     </AnchorPane>
                                  </content>

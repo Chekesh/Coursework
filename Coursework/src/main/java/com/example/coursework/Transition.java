@@ -32,7 +32,7 @@ public class Transition {
 
     public static void Alert(String setHeaderText, String ContentText){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Ошибка");
+        alert.setTitle("Диологовое окно");
         alert.setHeaderText(setHeaderText);
         alert.setContentText(ContentText);
         alert.showAndWait();/*.ifPresent(rs -> {
@@ -41,9 +41,4 @@ public class Transition {
             }
         });*/
     }
-
-
-
-
-
 }

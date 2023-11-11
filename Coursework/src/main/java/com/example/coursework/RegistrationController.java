@@ -80,7 +80,7 @@ public class RegistrationController {
                 Name.getText().trim(), Patronymic.getText().trim(), Birth_Date.getValue().toString().trim(), gender,
                 Phone_Number.getText().trim(), 3);
 
-        database.New_Users(new_user);
+        database.New_And_Update_Users(new_user, "Registratinon");
 
         try {
             Transition.TransitionWindows(Back, "Authorization", 600.0, 400.0, false);

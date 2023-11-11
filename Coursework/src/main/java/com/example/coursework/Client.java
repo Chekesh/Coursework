@@ -81,6 +81,8 @@ public class Client implements Initializable {
 
     boolean discovery = true;
 
+    Completion completion = new Completion(database);
+
 
     @FXML
     void BtnExit(MouseEvent event) {
@@ -96,10 +98,8 @@ public class Client implements Initializable {
         //Pane.setMinHeight(300);
         //Pane.setMinWidth(300);
 
-        Login.setText(Database.user.getLogin());
-        Name.setText(Database.user.getName());
-        Patronymic.setText(Database.user.getPatronymic());
-        Surname.setText(Database.user.getSurname());
+        completion.Completion(Login, Name, Patronymic, Surname);
+
 
         //System.out.println(database.Get_History_Suggestion("Services"));
         //System.out.println(database.Get_History_Suggestion("Products"));
@@ -170,8 +170,8 @@ public class Client implements Initializable {
     public void Click_Services(MouseEvent event) {
         if (Services_Box.getValue() != null) {
             if (Services_Box.getValue().toString().equals(String.valueOf(Database.suggestion.Title))) {
-                database.New_History(String.valueOf(Database.user.getID_Users()), String.valueOf(Database.suggestion.idSuggestion), "В обработке", "0", "Неопределена", LocalDate.now().toString(), Services_Comments.getText(), "Services");
-                int id = database.Get_Max_History("Services");
+                database.New_And_Update_History(new HiSug(1, Database.user.getID_Users(), Database.suggestion.idSuggestion, "В обработке", "0", "Неопределена", LocalDate.now().toString(), Services_Comments.getText()), "Services_Users");
+                int id = database.Get_Max("History_Services");
                 if(id !=0){
                     Transition.Alert("Успешно","id вашего заказа " + id);
                 }
@@ -187,9 +187,9 @@ public class Client implements Initializable {
     public void Click_Products(MouseEvent event) {
         if (Products_Box.getValue() != null) {
             if (Products_Box.getValue().toString().equals(String.valueOf(Database.suggestion.Title))) {
-                database.New_History(String.valueOf(Database.user.getID_Users()), String.valueOf(Database.suggestion.idSuggestion), "В обработке", "0", "Неопределена", LocalDate.now().toString(), Products_Comments.getText(), "Products");
-                database.Get_Max_History("Products");
-                int id = database.Get_Max_History("Products");
+                database.New_And_Update_History(new HiSug(1, Database.user.getID_Users(), Database.suggestion.idSuggestion, "В обработке", "0", "Неопределена", LocalDate.now().toString(), Products_Comments.getText()), "Products_Users");
+                //database.Get_Max_History("Products");
+                int id = database.Get_Max("History_Product");
                 if(id !=0){
                     Transition.Alert("Успех","id вашего заказа " + id);
                 }
